@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Digimon Favorit</title>
+</head>
+<body>
+    <center>
+    <h2>Digimon Favoritmu</h2>
+    <img src="{{samasuka['image']}}" alt="Digimon Pic"><br>
+    Name : {{samasuka['digimon'].capitalize()}}
+    Stage : {{samasuka['stage']}}
+    Type : {{samasuka['type']}}
+    Attribute : {{samasuka['attribute']}}<br>
+    <h2>Rekomendasi Digimon:</h2>
+    <ul>
+        {% for item in rekomen %}
+        <img src="{{item['gambar']}}" alt="Gambar digi"><br>
+        <h4>Name : {{samasuka['digimon']}}</h4><br>
+        Stage : {{samasuka['stage']}}
+        Type : {{samasuka['type']}}<br>
+        {% endfor %}
+    </ul>
+    <form action="http://localhost:5000">
+        <button type="submit">Kembali</button>
+    </form>
+</center>
+
+</body>
+</html>
